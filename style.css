@@ -1,0 +1,398 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    color: white;
+}
+
+body{
+    margin-left: 10px;
+    background-color: black;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.text{
+    margin-left: 170px;
+    font-size: 26px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.firstsection{
+    display: flex;
+    justify-content: space-around;
+    margin: 23px 0;
+}
+.firstsection > div{
+    width: 30%;
+}
+.leftsection{
+    margin-top: 150px;
+    font-size: 2.5rem;
+    font-size:20px;
+}
+.leftsection {
+    color: #ff004f;
+    font-size: 30px;
+    margin: 30px 0;
+}
+#element {
+   color: rgb(162, 87, 232);
+}
+.rightsection img{
+    width: 100%;
+    margin: 50px 0;
+}
+
+/*----------------------------------- About code --------------------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 70%;
+    margin-left: 20%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.about-col-2 p{
+    font-size: 18px;
+    line-height: 180%;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 16px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/* <!--------------------------------------- services ------------------------------------------------> */
+#services{
+    padding: 30px 0;
+}
+.services-list img{
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.services-list div{
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s,transform 0.5s;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 4000;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background-color: #ff004f;
+    transform: translate(-10px);
+}
+/* --------------------Portfoilo---------------------- */
+#portfoilo{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background:linear-gradient(rgba(0,0,0,0.6),#ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a img{
+    height: 35px;
+    width: 30px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background-color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn:hover{
+    background-color: #ff004f;
+}
+
+/* ----------------------------------------content------------------------------------------ */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p img{
+    height: 30px;
+    width: 30px;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p img{
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons img{
+    height: 30px;
+    width: 30px;
+    transition: transform 0.5s;
+}
+.social-icons img:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.contact-email {
+    display: flex;
+    align-items: center;
+}
+
+.email-icon {
+    width: 24px; /* Adjust the icon size as needed */
+    height: 24px;
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+.email-text {
+    font-size: 16px;
+    color: #fff; /* Set color as needed */
+}
+.contact-call {
+    display: flex;
+    align-items: center;
+}
+
+.Call-icon {
+    width: 24px; /* Adjust the icon size as needed */
+    height: 24px;
+    margin-right: 8px; /* Space between the icon and text */
+}
+
+.phone-text {
+    font-size: 16px;
+    color: #fff; /* Set color as needed */
+}
+
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right input[type="text"],
+.contact-right input[type="email"],
+.contact-right textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    background-color: #262626; 
+    color: #fff; 
+    transition: border-color 0.3s ease;
+}
+
+.contact-right input[type="text"]:focus,
+.contact-right input[type="email"]:focus,
+.contact-right textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.contact-right textarea {
+    resize: vertical;
+}
+.contact-right .btn2 {
+    padding: 12px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ff004f;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+/* ----------------------------css for small screen-------------------------------------- */
+
+.left {
+    font-size: 60px;
+    text-align: center;
+}
+.leftSection div{
+    font-size: 30px;
+}
